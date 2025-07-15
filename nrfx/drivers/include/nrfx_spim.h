@@ -35,7 +35,6 @@
 #define NRFX_SPIM_H__
 
 #include <nrfx.h>
-#include <haly/nrfy_spim.h>
 #include <haly/nrfy_gpio.h>
 
 #ifdef __cplusplus

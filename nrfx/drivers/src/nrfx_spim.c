@@ -39,6 +39,12 @@
 #error "No enabled SPIM instances. Check <nrfx_config.h>."
 #endif
 
+#define NRF_SPIM_MEASURE_REG_ACCESS 0
+
+volatile uint32_t g_reg_writes;
+volatile uint32_t g_reg_reads;
+
+#include <haly/nrfy_spim.h>
 #include <nrfx_spim.h>
 #include "prs/nrfx_prs.h"
 
