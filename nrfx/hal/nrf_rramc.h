@@ -862,7 +862,7 @@ NRF_STATIC_INLINE void nrf_rramc_buffer_read(void * dst, uint32_t address, uint3
 
 NRF_STATIC_INLINE void nrf_rramc_lp_mode_set(NRF_RRAMC_Type * p_reg, nrf_rramc_lp_mode_t mode)
 {
-    p_reg->POWER.LOWPOWERCONFIG = (NRF_RRAMC->POWER.LOWPOWERCONFIG &
+    p_reg->POWER.LOWPOWERCONFIG = (p_reg->POWER.LOWPOWERCONFIG &
                                    ~RRAMC_POWER_LOWPOWERCONFIG_MODE_Msk) |
                                   (((uint32_t)mode << RRAMC_POWER_LOWPOWERCONFIG_MODE_Pos) &
                                    RRAMC_POWER_LOWPOWERCONFIG_MODE_Msk);
